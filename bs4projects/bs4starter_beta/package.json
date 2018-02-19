@@ -4,7 +4,7 @@
   "description": "Started Project Bootstrap 4 Beta",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp"
   },
   "author": "Cleberson Pauluci",
   "license": "MIT",
