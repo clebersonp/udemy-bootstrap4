@@ -82,35 +82,62 @@
     <!--########################START HERE#########################-->
 
     <!-- POPOVER -->
-    <button>
+    <button 
+      id="danger"
+      class="btn btn-lg btn-danger"
+      data-placement="top"
+      data-toggle="popover" 
+      title="Popover Title"
+      data-content="And here's some amazing content. It's very engaging. Right?">
       Toggle popover
     </button>
 
-    <button>
+    <button
+      class="btn btn-lg btn-warning"
+      data-placement="right"
+      data-toggle="popover" 
+      title="Popover Title"
+      data-content="And here's some amazing content. It's very engaging. Right?">
       Toggle popover
     </button>
 
-    <button>
+    <button
+      class="btn btn-lg btn-success"
+      data-placement="bottom"
+      data-toggle="popover"
+      title="Popover Title"
+      data-content="And here's some amazing content. It's very engaging. Right?">
       Toggle popover
     </button>
 
-    <button>
+    <button
+      class="btn btn-lg btn-outline-info"
+      data-placement="left"
+      data-toggle="popover"
+      title="Popover Title"
+      data-content="And here's some amazing content. It's very engaging. Right?">
       Toggle popover
     </button>
 
     <br><br>
 
     <!-- DISMISSIBLE POPOVER -->
-    <button>
+    <button
+      class="btn btn-lg btn-outline-success"
+      data-toggle="popover"
+      data-placement="bottom"
+      title="Popover Title"
+      data-trigger="focus"
+      data-content="And here's some amazing content. It's very engaging. Right?">
       Toggle popover
     </button>
 
     <hr>
 
     <!-- CONTROL WITH JS -->
-    <button>Show Popover</button>
-    <button>Hide Popover</button>
-    <button>Toggle Popover</button>
+    <button class="btn btn-lg btn-secondary" onclick="showPopover()">Show Popover</button>
+    <button class="btn btn-lg btn-primary" onclick="hidePopover()">Hide Popover</button>
+    <button class="btn btn-lg btn-info" onclick="togglePopover()">Toggle Popover</button>
   </div>
 
   <div style="margin-top:500px;"></div>
@@ -119,7 +146,42 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
   <script>
-    
+    // Init Popovers
+    $('[data-toggle="popover"]').popover();
+
+    // Dismissible
+    $('.popover-dismiss').popover({
+      trigger: 'focus'
+    });
+
+    function showPopover() {
+      $('#danger').popover('show');
+    };
+
+    function hidePopover() {
+      $('#danger').popover('hide');
+    };
+
+    function togglePopover() {
+      $('#danger').popover('toggle');
+    };
+
+    // Popover Events
+    $('#danger').on('show.bs.popover', function () {
+      console.log('Popover show');
+    });
+
+    $('#danger').on('shown.bs.popover', function () {
+      console.log('Popover shown');
+    });
+
+    $('#danger').on('hide.bs.popover', function () {
+      console.log('Popover hide');
+    });
+
+    $('#danger').on('hidden.bs.popover', function () {
+      console.log('Popover hidden');
+    });
   </script>
 </body>
 </html>
