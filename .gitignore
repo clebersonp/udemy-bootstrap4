@@ -12,6 +12,6 @@
 ###  npm install bootstrap@4.0.0-beta font-awesome jquery popper.js --save
 ###  npm install gulp gulp-sass browser-sync --save-dev
 ###  npm install -g gulp-cli
-bs4projects/bs4starter_beta/node_modules
+node_modules/
 
 # End of https://www.gitignore.io/api/visualstudiocode
