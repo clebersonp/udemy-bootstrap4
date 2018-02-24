@@ -1,0 +1,16 @@
+$primary: #329286;
+
+body {
+    margin-top: 105px;
+}
+
+.navbar {
+    box-shadow: 1px 1px 8px $primary;
+    opacity: 0.8;
+    background: #fff;
+
+    .nav-item {
+        font-size: 1.4rem;
+        padding-right: 20px;
+    }
+}
