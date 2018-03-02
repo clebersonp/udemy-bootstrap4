@@ -1,4 +1,5 @@
 $primary: #329286;
+$primary-overlay: rgba(50, 146, 166, 0.9);
 
 body {
     margin-top: 105px;
@@ -13,4 +14,10 @@ body {
         font-size: 1.4rem;
         padding-right: 20px;
     }
+}
+
+#showcase {
+    position: relative;
+    background: url('../img/mountains.jpg');
+    min-height: 600px;
 }
